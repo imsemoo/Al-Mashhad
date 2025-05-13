@@ -1,6 +1,6 @@
 :root {
   /* Brand Colors */
-  --color-primary: #0077C0;
+  --color-primary: #3AB4FF;
   --color-primary-hover: #005F99;
   --color-accent: #C7EEFF;
 
@@ -13,7 +13,7 @@
 
   /* States */
   --color-success: #28a745;
-  --color-danger: #dc3545;
+  --color-danger: #FF4C4C;
 
   /* Typography */
   --text-primary: #212121;
@@ -205,4 +205,8 @@ ul {
 .overlay {
   background: rgba(0, 0, 0, 0.6);
   color: var(--text-primary);
+}
+
+.bg-primary {
+  background: var(--color-primary) !important;
 }

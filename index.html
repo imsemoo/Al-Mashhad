@@ -110,73 +110,101 @@
     </div>
   </div>
 
-  <!-- Professional comment: Header section with responsive Bootstrap navbar -->
-  <header class="bg-primary">
-    <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg p-0">
+  <!-- Header section with responsive Bootstrap navbar -->
 
-        <!-- Professional comment: Brand/logo on the right for RTL layout -->
-        <a class="navbar-brand text-white d-flex align-items-center order-1 order-lg-4" href="#">
-          <img src="img/logo.svg" alt="Almashhad Logo" class="me-2" style="height:40px;">
-          <span>مركز المشهد للدراسات</span>
+  <header class="header-nav bg-primary">
+    <div class="container">
+      <nav class="box-navbar navbar-expand-lg">
+        <!-- Header with logo -->
+        <a href="#" class="navbar-brand d-flex align-items-center me-4">
+          <img src="./assets/img/logo.svg" alt="Almashhad Logo" class="me-2" style="height:40px;">
         </a>
 
-        <!-- Professional comment: Navbar toggler for mobile -->
-        <button class="navbar-toggler border-0 order-5 ms-auto" type="button" data-bs-toggle="collapse"
+        <!-- Mobile menu toggler -->
+        <button class="navbar-toggler border-0 text-white d-lg-none" type="button" data-bs-toggle="collapse"
           data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <i class="fas fa-bars fa-lg"></i>
         </button>
 
-        <!-- Professional comment: Collapsible navigation links -->
-        <div class="collapse navbar-collapse order-4 order-lg-1" id="mainNavbar">
-          <ul class="navbar-nav mx-auto">
+        <!-- Navigation links (collapsible on mobile) -->
+        <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+          <ul class="nav mx-auto flex-column flex-lg-row">
             <li class="nav-item">
-              <a class="nav-link text-white active" href="#">الرئيسية</a>
+              <a class="nav-link active px-3 bg-primary text-white" href="#">الرئيسية</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">ترجمات</a>
+            <li class="nav-item"><a class="nav-link px-3 text-dark" href="#">ترجمات</a></li>
+            <li class="nav-item"><a class="nav-link px-3 text-dark" href="#">تقارير</a></li>
+            <li class="nav-item"><a class="nav-link px-3 text-dark" href="#">تقدير موقف</a></li>
+            <li class="nav-item"><a class="nav-link px-3 text-dark" href="#">آراء</a></li>
+            <li class="nav-item"><a class="nav-link px-3 text-dark" href="#">بودكاست</a></li>
+            <li class="nav-item"><a class="nav-link px-3 text-dark" href="#">فيديو</a></li>
+            <li class="nav-item"><a class="nav-link px-3 text-dark" href="#">دوريات</a></li>
+            <li class="nav-item"><a class="nav-link px-3 text-dark" href="#">أوراق تحليلية</a></li>
+          </ul>
+
+          <!-- Mobile search field -->
+          <div class="d-lg-none w-100 my-3">
+            <div class="input-group">
+              <span class="input-group-text bg-white border-0">
+                <i class="fas fa-search text-primary"></i>
+              </span>
+              <input type="search" class="form-control border-0" placeholder="ابحث..." aria-label="Search">
+            </div>
+          </div>
+
+          <!-- Mobile social icons -->
+          <div class="d-lg-none d-flex justify-content-center gap-3 mb-3">
+            <a href="#" class="text-dark"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-dark"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="text-dark"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="text-dark"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Desktop search -->
+        <a class="d-none d-lg-flex align-items-center  search-icon" #fff>
+          <i class="fas fa-search "></i>
+        </a>
+
+        <!-- Desktop social icons -->
+        <div class="d-none d-lg-flex social-media-list">
+          <a href="#" class="text-dark"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-dark"><i class="fa-brands fa-x-twitter"></i></a>
+
+          <a href="#" class="text-dark"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="text-dark"><i class="fab fa-instagram"></i></a>
+        </div>
+      </nav>
+
+      <!-- Breaking news ticker -->
+      <div class="breaking-news d-flex align-items-center  overflow-hidden mt-4">
+        <span class="breaking-badge">عاجل</span>
+        <div class="ticker flex-grow-1">
+          <ul class="ticker__list">
+            <li>
+              <span class="news-tag">سياسة</span>
+              <span> بدون استنساخ المشهد. عون يمكنك إدراج النتائج بالعينين – تحديث 12:30
+              </span>
             </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">تقارير</a>
+            <li>
+              <span class="news-tag">علاقات دولية</span>
+              <span> بدون استنساخ المشهد. عون يمكنك إدراج النتائج بالعينين – تحديث 12:30
+              </span>
             </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">تقدير موقف</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">آراء</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">بودكاست</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">فيديو</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">دوريات</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">أوراق تحليلية</a>
+            <li>
+              <span class="news-tag">اقتصاد</span>
+              <span> بدون استنساخ المشهد. عون يمكنك إدراج النتائج بالعينين – تحديث 12:30
+              </span>
             </li>
           </ul>
         </div>
+      </div>
 
-        <!-- Professional comment: Search form (visible on large screens) -->
-        <form class="d-none d-lg-flex align-items-center order-3 me-3">
-          <i class="fas fa-search text-white"></i>
-          <input type="search" class="form-control form-control-sm ms-2 bg-transparent border-0 text-white"
-            placeholder="ابحث..." aria-label="Search">
-        </form>
 
-        <!-- Professional comment: Social media icons (visible on large screens) -->
-        <div class="d-none d-lg-flex align-items-center order-2 me-3">
-          <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-        </div>
 
-      </nav>
     </div>
   </header>
+
 
 
 
