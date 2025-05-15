@@ -2,65 +2,65 @@ $(document).ready(function () {
   $(window).on("scroll", function () {
     $(".navbar").toggleClass("fixed-nav", $(window).scrollTop() > 50);
   });
-    // Toggle search input visibility when search icon is clicked
-    document.addEventListener('DOMContentLoaded', function(){
-      const searchToggle = document.querySelector('.search-toggle');
-      const searchInputContainer = document.querySelector('.search-input-container');
-      searchToggle.addEventListener('click', function(){
-        searchInputContainer.classList.toggle('active');
-      });
+  // Toggle search input visibility when search icon is clicked
+  document.addEventListener('DOMContentLoaded', function () {
+    const searchToggle = document.querySelector('.search-toggle');
+    const searchInputContainer = document.querySelector('.search-input-container');
+    searchToggle.addEventListener('click', function () {
+      searchInputContainer.classList.toggle('active');
     });
-
-    $(".articlesSlider").owlCarousel({
-      loop: true,             
-      rtl: true,
-      margin: 15,           
-      nav: false,            
-      dots: true,            
-      autoplay: true,        
-      autoplayTimeout: 3000, 
-      autoplayHoverPause: true, 
-      animateOut: 'slideOutDown',
-      animateIn: 'flipInX',
-      responsive: {
-        0: {
-          items: 1          
-        },
-        768: {
-          items: 1         
-        },
-        992: {
-          items: 1         
-        }
-      }
-    });
-    $(".owl-about-us").owlCarousel({
-      loop: true,
-      margin: 20,
-      nav: false,
-      dots: true,
-      rtl: true,
-      autoplay: true,
-      autoplayTimeout: 3000,
-      responsive: {
-          0: {
-              items: 1
-          },
-          600: {
-              items: 3
-          },
-          1000: {
-              items: 4
-          }
-      }
   });
-    // عند تحميل الصفحة بالكامل
-    $(window).on('load', function () {
-      $('#preloadr').fadeOut(500); // بيخفي اللودر بعد التحميل بـ 0.5 ثانية
-    });
-    
-    var $loader = $('#preloadr'),
-      isHidden = false;
+
+  $(".articlesSlider").owlCarousel({
+    loop: true,
+    rtl: true,
+    margin: 15,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    animateOut: 'slideOutDown',
+    animateIn: 'flipInX',
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 1
+      },
+      992: {
+        items: 1
+      }
+    }
+  });
+  $(".owl-about-us").owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: false,
+    dots: true,
+    rtl: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 3
+      },
+      1000: {
+        items: 4
+      }
+    }
+  });
+  // عند تحميل الصفحة بالكامل
+  $(window).on('load', function () {
+    $('#preloadr').fadeOut(500); // بيخفي اللودر بعد التحميل بـ 0.5 ثانية
+  });
+
+  var $loader = $('#preloadr'),
+    isHidden = false;
 
   /**
    * Fade out the loader element once called.
@@ -81,25 +81,59 @@ $(document).ready(function () {
 
   // For snappier UX, fade the loader out shortly after the DOM is ready,
   // even before other assets finish loading.
-  $(document).ready(function() {
+  $(document).ready(function () {
     setTimeout(hideLoader, 2000);
   });
-  
-    $(".mobile-menu-toggle").on("click", function () {
-      $(".navbar-links-mobile").addClass("active");
-      $("body").addClass("mobile-menu-open");
-    });
 
-    $(".mobile-close").on("click", function () {
+  $(".mobile-menu-toggle").on("click", function () {
+    $(".navbar-links-mobile").addClass("active");
+    $("body").addClass("mobile-menu-open");
+  });
+
+  $(".mobile-close").on("click", function () {
+    $(".navbar-links-mobile").removeClass("active");
+    $("body").removeClass("mobile-menu-open");
+  });
+
+  // لو ضغط المستخدم بره القائمة
+  $(document).on("click", function (e) {
+    if (!$(e.target).closest('.navbar-links-mobile, .mobile-menu-toggle').length) {
       $(".navbar-links-mobile").removeClass("active");
       $("body").removeClass("mobile-menu-open");
-    });
+    }
+  });
 
-    // لو ضغط المستخدم بره القائمة
-    $(document).on("click", function (e) {
-      if (!$(e.target).closest('.navbar-links-mobile, .mobile-menu-toggle').length) {
-        $(".navbar-links-mobile").removeClass("active");
-        $("body").removeClass("mobile-menu-open");
-      }
-    });
+  var owl = $('.hero-carousel').owlCarousel({
+    items: 1,
+    loop: true,
+    autoplay: false,
+    dots: false,
+    nav: false,
+    rtl: true,
+    smartSpeed: 600,
+
+  });
+
+  // Hook up your custom buttons
+  $('.custom-next').click(function () {
+    owl.trigger('next.owl.carousel');
+  });
+
+  $('.custom-prev').click(function () {
+    owl.trigger('prev.owl.carousel');
+  });
+  $('.news-thumb').on('click', function () {
+    var index = $(this).data('slide');
+    $('.news-thumb').removeClass('active');
+    $(this).addClass('active');
+    owl.trigger('to.owl.carousel', [index, 500]);
+  });
+
+  owl.on('changed.owl.carousel', function (event) {
+    var index = event.item.index - event.relatedTarget._clones.length / 2;
+    if (index >= event.item.count) { index = 0; }
+    if (index < 0) { index = event.item.count - 1; }
+    $('.news-thumb').removeClass('active');
+    $('.news-thumb[data-slide="' + index + '"]').addClass('active');
+  });
 });
