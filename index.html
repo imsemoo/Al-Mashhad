@@ -1222,9 +1222,9 @@
 
   <!-- ========================================================= -->
   <!--                        VIDEOS SECTION                     -->
-  <!--  • Mix of local & YouTube videos                          -->
-  <!--  • Featured horizontal + three small cards                -->
-  <!--  • Click “play” swaps poster for HTML5 <video> or YouTube -->
+  <!--  • Featured uses a real YouTube video                      -->
+  <!--  • Three small cards (mix of local & YouTube)             -->
+  <!--  • Click anywhere on poster to play                       -->
   <!-- ========================================================= -->
   <section class="videos-section my-5">
     <div class="container">
@@ -1235,20 +1235,11 @@
         <a href="#" class="more-link">عرض المزيد <i class="fa-solid fa-angles-left"></i></a>
       </div>
 
-      <!-- Featured horizontal video -->
+      <!-- Featured horizontal video (YouTube) -->
       <div class="row gx-4 gy-4 mb-5">
         <div class="col-lg-7">
-          <div class="video-featured position-relative" data-src="assets/video/dummy.mp4">
-            <!-- Poster image -->
+          <div class="video-featured position-relative rounded" data-youtube-id="ysz5S6PUM-U">
             <img src="assets/img/articles/Horizontal/1.jpg" alt="Featured video" class="img-fluid rounded">
-
-            <!-- Hidden HTML5 video for local file -->
-            <video class="video-element rounded" controls style="display:none; width:100%; height:auto;">
-              <source src="assets/video/dummy.mp4" type="video/mp4">
-              Your browser does not support HTML5 video.
-            </video>
-
-            <!-- Play button overlay -->
             <button class="video-play" aria-label="Play video">
               <i class="fa-solid fa-play"></i>
             </button>
@@ -1263,7 +1254,7 @@
                 <time datetime="2025-04-15">١٥ · إبريل · ٢٠٢٥</time>
               </div>
               <div class="author">
-                <i class="fa-solid fa-user"></i> محمد أحمد
+                <i class="fa-solid fa-feather"></i> محمد أحمد
               </div>
             </div>
           </div>
@@ -1271,8 +1262,8 @@
             السعودية تعرض منتجاتها السيبرانية للعالم في مؤتمر “RSA الدولي”
           </h3>
           <p class="text-muted">
-            تشارك السعودية ممثلة في الهيئة الوطنية للأمن السيبراني في جناحٍ سعودي في مؤتمر “RSA الدولي” الذي يُعقد
-            من 28 أبريل إلى 1 مايو 2025 في سان فرانسيسكو.
+            تشارك السعودية ممثلة في الهيئة الوطنية للأمن السيبراني في جناحٍ سعودي في مؤتمر
+            “RSA الدولي” الذي يُعقد من 28 أبريل إلى 1 مايو 2025 في سان فرانسيسكو.
           </p>
         </div>
       </div>
@@ -1289,7 +1280,7 @@
               </button>
               <video class="video-element-sm rounded" controls
                 style="display:none; width:100%; height:100%; position:absolute; top:0; left:0; object-fit:cover;">
-                <source src="assets/video/dummy.mp4" type="video/mp4">
+                <source src="assets/video/2247164-hd_1920_1080_30fps.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
               </video>
             </div>
@@ -1297,8 +1288,13 @@
               <div class="row-meta justify-content-between mb-2">
                 <span class="category"><i class="fa-solid fa-video"></i> فيديو</span>
                 <div class="d-flex gap-3">
-                  <div class="date"><i class="fa-solid fa-calendar-days"></i> 15 إبريل 2025</div>
-                  <div class="author"><i class="fa-solid fa-user"></i> محمد أحمد</div>
+                  <div class="date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <time datetime="2025-04-15">١٥ · إبريل · ٢٠٢٥</time>
+                  </div>
+                  <div class="author">
+                    <i class="fa-solid fa-feather"></i> محمد أحمد
+                  </div>
                 </div>
               </div>
               <h6 class="card-title">
@@ -1316,14 +1312,18 @@
               <button class="video-play-sm" aria-label="Play video">
                 <i class="fa-solid fa-play"></i>
               </button>
-              <!-- no <video> tag here -->
             </div>
             <div class="card-body">
               <div class="row-meta justify-content-between mb-2">
                 <span class="category"><i class="fa-solid fa-video"></i> فيديو</span>
                 <div class="d-flex gap-3">
-                  <div class="date"><i class="fa-solid fa-calendar-days"></i> 15 إبريل 2025</div>
-                  <div class="author"><i class="fa-solid fa-user"></i> محمد أحمد</div>
+                  <div class="date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <time datetime="2025-04-15">١٥ · إبريل · ٢٠٢٥</time>
+                  </div>
+                  <div class="author">
+                    <i class="fa-solid fa-feather"></i> محمد أحمد
+                  </div>
                 </div>
               </div>
               <h6 class="card-title">
@@ -1343,15 +1343,20 @@
               </button>
               <video class="video-element-sm rounded" controls
                 style="display:none; width:100%; height:100%; position:absolute; top:0; left:0; object-fit:cover;">
-                <source src="assets/video/dummy.mp4" type="video/mp4">
+                <source src="assets/video/2247164-hd_1920_1080_30fps.mp4" type="video/mp4">
               </video>
             </div>
             <div class="card-body">
               <div class="row-meta justify-content-between mb-2">
                 <span class="category"><i class="fa-solid fa-video"></i> فيديو</span>
                 <div class="d-flex gap-3">
-                  <div class="date"><i class="fa-solid fa-calendar-days"></i> 15 إبريل 2025</div>
-                  <div class="author"><i class="fa-solid fa-user"></i> محمد أحمد</div>
+                  <div class="date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <time datetime="2025-04-15">١٥ · إبريل · ٢٠٢٥</time>
+                  </div>
+                  <div class="author">
+                    <i class="fa-solid fa-feather"></i> محمد أحمد
+                  </div>
                 </div>
               </div>
               <h6 class="card-title">
