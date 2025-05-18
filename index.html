@@ -60,6 +60,8 @@
   <!-- Favicon -->
   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
 
+  <script src="https://unpkg.com/wavesurfer.js"></script>
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/css/normalize.css" />
   <link rel="stylesheet" href="assets/css/all.min.css" />
@@ -223,6 +225,7 @@
     </div>
   </header>
 
+
   <!-- ========================================================= -->
   <!--                        HERO SLIDER                        -->
   <!-- ========================================================= -->
@@ -345,6 +348,7 @@
   <!-- ========================================================= -->
   <!--                       HERO SLIDER END                     -->
   <!-- ========================================================= -->
+
 
 
   <!-- ========================================================= -->
@@ -504,10 +508,11 @@
   <!-- ========================================================= -->
 
 
+
   <!-- ========================================================= -->
   <!--              SITUATION ESTIMATES SECTION START            -->
   <!-- ========================================================= -->
-  <section class="situation-estimates my-5">
+  <section class="situation-estimates ">
     <div class="container">
       <!-- ===== Section Header (Title + CTA Link) ===== -->
       <div class="d-flex justify-content-between align-items-center mb-4">
@@ -528,7 +533,7 @@
 
                 <!-- ===== Featured Card Content ===== -->
                 <div class="f-content">
-                  <span class="badge bg-info"><i class="fa-solid fa-chart-pie"></i>&nbsp;تقديرات</span>
+                  <span class="category"><i class="fa-solid fa-chart-pie"></i> تقديرات</span>
 
                   <h3 class="f-title mt-3">
                     عادة يومية شائعة تُدمِّر الدماغ كشَف عنها مؤخراً طبيب من
@@ -751,11 +756,477 @@
   <!--              SITUATION ESTIMATES SECTION END              -->
   <!-- ========================================================= -->
 
+
+
+  <!-- ========================================================= -->
+  <!--                       STUDIES SECTION                      -->
+  <!--  Updated layout:                                           -->
+  <!--  • Left  (lg)  : Featured article      – col-lg-7 (≈58%)   -->
+  <!--  • Right (lg)  : Two stacked articles – col-lg-5 (≈42%)   -->
+  <!--  • Mobile      : Cards stack naturally via grid breakpoints-->
+  <!-- ========================================================= -->
+  <section class="studies-section ">
+    <div class="container">
+
+      <!-- Section header (title + CTA) -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="section-title">دراسات</h2>
+        <a href="#" class="more-link">عرض المزيد <i class="fa-solid fa-angles-left"></i></a>
+      </div>
+
+      <div class="row gx-4 gy-4">
+        <!-- ===================================================== -->
+        <!--  LEFT COLUMN – FEATURED ARTICLE (col-lg-7)            -->
+        <!-- ===================================================== -->
+        <div class="col-lg-7">
+          <article class="featured-card position-relative"
+            style="background-image:url('assets/img/articles/Square/8.jpg')">
+            <div class="overlay"></div>
+            <div class="featured-content">
+
+              <span class="category"><i class="fa-solid fa-file-lines"></i> دراسات</span>
+
+              <!-- Click-through title -->
+              <h3 class="mt-2 mb-2">
+                <a href="#" class="featured-link" style="color:inherit;text-decoration:none;">
+                  خلال 20 يوماً فقط.. 300 ألف نزحوا من الفاشر شمال دارفور
+                </a>
+              </h3>
+
+              <div class="meta d-flex align-items-center gap-3">
+                <div class="date">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <time datetime="2025-04-15">١٥ · إبريل · ٢٠٢٥</time>
+                </div>
+                <div class="author">
+                  <i class="fa-solid fa-feather"></i> أحمد محمد
+                </div>
+              </div>
+
+              <p class="mt-2">
+                بينما تتقاتل الميليشيات بين الجنينه ودعم السريع في الفاشر عاصمة ولاية شمال دارفور، تواصل
+                عمليات النزوح من معسكرات زوم ومعسكر دوميك الى مناطق الكروما.
+              </p>
+            </div>
+          </article>
+        </div><!-- /col-lg-7 -->
+
+        <!-- ===================================================== -->
+        <!--  RIGHT COLUMN – TWO STACKED CARDS (col-lg-5)          -->
+        <!-- ===================================================== -->
+        <div class="col-lg-5">
+          <div class="row gx-3 gy-4">
+
+            <!-- Card 01 ----------------------------------------------------- -->
+            <div class="col-12">
+              <div class="card-small">
+                <a href="#">
+                  <img src="assets/img/articles/Square/6.jpg" alt="Thumbnail" class="img-fluid">
+                </a>
+                <div class="card-body">
+                  <div class="row-meta">
+                    <span class="category"><i class="fa-solid fa-chart-line"></i> دراسات</span>
+                    <div class="date">
+                      <i class="fa-solid fa-calendar-days"></i>
+                      <time datetime="2025-04-15">١٥ · إبريل · ٢٠٢٥</time>
+                    </div>
+                  </div>
+                  <h6>
+                    <a href="#" class="card-link" style="color:inherit;text-decoration:none;">
+                      إغلاق سفارات أميركية في أفريقيا.. ورويترز ينفي "شائعات"
+                    </a>
+                  </h6>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 02 ----------------------------------------------------- -->
+            <div class="col-12">
+              <div class="card-small">
+                <a href="#">
+                  <img src="assets/img/articles/Square/7.jpg" alt="Thumbnail" class="img-fluid">
+                </a>
+                <div class="card-body">
+                  <div class="row-meta">
+                    <span class="category"><i class="fa-solid fa-newspaper"></i> دراسات</span>
+                    <div class="date">
+                      <i class="fa-solid fa-calendar-days"></i>
+                      <time datetime="2025-04-15">١٥ · إبريل · ٢٠٢٥</time>
+                    </div>
+                  </div>
+                  <h6>
+                    <a href="#" class="card-link" style="color:inherit;text-decoration:none;">
+                      لافروف: باريس ولندن تهددان موسكو وتنتقضان بنغال
+                    </a>
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------- -->
+
+          </div><!-- /inner row -->
+        </div><!-- /col-lg-5 -->
+      </div><!-- /outer row -->
+    </div><!-- /container -->
+  </section>
+  <!-- ========================================================= -->
+  <!--                     STUDIES SECTION END                   -->
+  <!-- ========================================================= -->
+
+
+  <!-- ========================================================= -->
+  <!--                       ARTICLES SECTION                    -->
+  <!--  Layout (lg):                                             -->
+  <!--  • Three equal columns (col-lg-4)                         -->
+  <!--  • Each column                                            -->
+  <!--      - Large image card                                   -->
+  <!--      - Text-only list of 3 mini articles                  -->
+  <!--  Assets: only images that already exist (Square/1-8).     -->
+  <!-- ========================================================= -->
+  <section class="articles-section ">
+    <div class="container">
+
+      <!-- Section header -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="section-title">مقالات</h2>
+        <a href="#" class="more-link">عرض المزيد <i class="fa-solid fa-angles-left"></i></a>
+      </div>
+
+      <div class="row gx-4 gy-4">
+
+        <!-- =================================================== -->
+        <!--  COLUMN 01                                          -->
+        <!-- =================================================== -->
+        <div class="col-lg-4">
+
+          <!-- Large card -->
+          <article class="card-large">
+            <a href="#">
+              <img src="assets/img/articles/Square/2.jpg" alt="Hero 1" class="img-fluid">
+            </a>
+            <div class="card-body">
+              <div class="row-meta">
+                <span class="category"><i class="fa-solid fa-file-lines"></i> مقالات</span>
+                <div class="date"><i class="fa-solid fa-calendar-days"></i>
+                  <time datetime="2025-04-15">١٥ · إبريل · ٢٠٢٥</time>
+                </div>
+              </div>
+              <h4>
+                <a href="#" class="card-link" style="color:inherit;text-decoration:none;">
+                  زيلينسكي يتهم روسيا بتكثيف هجماتها.. "لا تنوي إنهاء الحرب"
+                </a>
+              </h4>
+            </div>
+          </article>
+
+          <!-- Mini list -->
+          <ul class="mini-news-list">
+            <li>
+              <a href="#" class="mini-link">غارات إسرائيلية عنيفة على جنوب لبنان وانفجار سيارة للجيش</a>
+              <div class="mini-meta d-flex align-items-center gap-3">
+                <div class="date">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <time datetime="2025-04-15">١٥ · إبريل · ٢٠٢٥</time>
+                </div>
+                <div class="author">
+                  <i class="fa-solid fa-feather"></i> محمد أحمد
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="mini-link">محادثات الهدنة في غزة متعثرة.. والوسطاء يعودون للقاهرة</a>
+              <div class="mini-meta d-flex align-items-center gap-3">
+                <div class="date">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <time datetime="2025-04-15">١٥ · إبريل · ٢٠٢٥</time>
+                </div>
+                <div class="author">
+                  <i class="fa-solid fa-feather"></i> محمد أحمد
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="mini-link">تقرير: ارتفاع معدلات البطالة بين الشباب في الضفة الغربية</a>
+              <div class="mini-meta d-flex align-items-center gap-3">
+                <div class="date">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <time datetime="2025-04-15">١٥ · إبريل · ٢٠٢٥</time>
+                </div>
+                <div class="author">
+                  <i class="fa-solid fa-feather"></i> محمد أحمد
+                </div>
+              </div>
+            </li>
+          </ul>
+
+        </div><!-- /col-lg-4 -->
+
+        <!-- =================================================== -->
+        <!--  COLUMN 02                                          -->
+        <!-- =================================================== -->
+        <div class="col-lg-4">
+
+          <article class="card-large">
+            <a href="#">
+              <img src="assets/img/articles/Square/4.jpg" alt="Hero 2" class="img-fluid">
+            </a>
+            <div class="card-body">
+              <div class="row-meta">
+                <span class="category"><i class="fa-solid fa-file-lines"></i> مقالات</span>
+                <div class="date"><i class="fa-solid fa-calendar-days"></i>
+                  <time datetime="2025-04-15">١٥ · إبريل · ٢٠٢٥</time>
+                </div>
+              </div>
+              <h4>
+                <a href="#" class="card-link" style="color:inherit;text-decoration:none;">
+                  تقرير أممي: القدس تواجه أخطر موجة استيطان منذ عقد
+                </a>
+              </h4>
+            </div>
+          </article>
+
+          <ul class="mini-news-list">
+            <li>
+              <a href="#" class="mini-link">الجيش السوداني يعلن السيطرة على مواقع غرب أم درمان</a>
+              <div class="mini-meta d-flex align-items-center gap-3">
+                <div class="date">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <time datetime="2025-04-15">١٥ · إبريل · ٢٠٢٥</time>
+                </div>
+                <div class="author">
+                  <i class="fa-solid fa-feather"></i> محمد أحمد
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="mini-link">البرلمان الأوروبي يقر تشريعات لحماية الصحفيين</a>
+              <div class="mini-meta d-flex align-items-center gap-3">
+                <div class="date">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <time datetime="2025-04-15">١٥ · إبريل · ٢٠٢٥</time>
+                </div>
+                <div class="author">
+                  <i class="fa-solid fa-feather"></i> محمد أحمد
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="mini-link">خبراء: الذكاء الاصطناعي سيعيد تشكيل سوق العمل بالمنطقة</a>
+              <div class="mini-meta d-flex align-items-center gap-3">
+                <div class="date">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <time datetime="2025-04-15">١٥ · إبريل · ٢٠٢٥</time>
+                </div>
+                <div class="author">
+                  <i class="fa-solid fa-feather"></i> محمد أحمد
+                </div>
+              </div>
+            </li>
+          </ul>
+
+        </div><!-- /col-lg-4 -->
+
+        <!-- =================================================== -->
+        <!--  COLUMN 03                                          -->
+        <!-- =================================================== -->
+        <div class="col-lg-4">
+
+          <article class="card-large">
+            <a href="#">
+              <img src="assets/img/articles/Square/6.jpg" alt="Hero 3" class="img-fluid">
+            </a>
+            <div class="card-body">
+              <div class="row-meta">
+                <span class="category"><i class="fa-solid fa-file-lines"></i> مقالات</span>
+                <div class="date"><i class="fa-solid fa-calendar-days"></i>
+                  <time datetime="2025-04-15">١٥ · إبريل · ٢٠٢٥</time>
+                </div>
+              </div>
+              <h4>
+                <a href="#" class="card-link" style="color:inherit;text-decoration:none;">
+                  الاقتصاد التركي يسجل نمواً مفاجئاً رغم الضغوط التضخمية
+                </a>
+              </h4>
+            </div>
+          </article>
+
+          <ul class="mini-news-list">
+            <li>
+              <a href="#" class="mini-link">البنك الدولي يحذر من تباطؤ النمو العالمي عام 2026</a>
+              <div class="mini-meta d-flex align-items-center gap-3">
+                <div class="date">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <time datetime="2025-04-15">١٥ · إبريل · ٢٠٢٥</time>
+                </div>
+                <div class="author">
+                  <i class="fa-solid fa-feather"></i> محمد أحمد
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="mini-link">دراسة: تغير المناخ يهدد الأمن الغذائي في الشرق الأوسط</a>
+              <div class="mini-meta d-flex align-items-center gap-3">
+                <div class="date">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <time datetime="2025-04-15">١٥ · إبريل · ٢٠٢٥</time>
+                </div>
+                <div class="author">
+                  <i class="fa-solid fa-feather"></i> محمد أحمد
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="mini-link">خبراء صحة: العادات الرقمية تضر بذاكرة المراهقين</a>
+              <div class="mini-meta d-flex align-items-center gap-3">
+                <div class="date">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <time datetime="2025-04-15">١٥ · إبريل · ٢٠٢٥</time>
+                </div>
+                <div class="author">
+                  <i class="fa-solid fa-feather"></i> محمد أحمد
+                </div>
+              </div>
+            </li>
+          </ul>
+
+        </div><!-- /col-lg-4 -->
+      </div><!-- /row -->
+    </div><!-- /container -->
+  </section>
+  <!-- ========================================================= -->
+  <!--                     ARTICLES SECTION END                  -->
+  <!-- ========================================================= -->
+
+  <!-- ================== EXTRA CSS (add to your stylesheet) ================== -->
+
+
+
+  <!-- ========================================================= -->
+  <!--                        PODCAST SECTION                     -->
+  <!--  • Four cards per row (col-lg-4)                          -->
+  <!--  • Reuses .card-small, .row-meta, .badge from news cards  -->
+  <!--  • Enhanced WaveSurfer.js player with full controls       -->
+  <!-- ========================================================= -->
+  <section class="podcast-section ">
+    <div class="container">
+      <!-- Section header -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="section-title">بودكاست</h2>
+        <a href="#" class="more-link">عرض المزيد <i class="fa-solid fa-angles-left"></i></a>
+      </div>
+      <div class="row gx-4 gy-4">
+        <!-- ===== Podcast Card 01 ===== -->
+        <div class="col-lg-4">
+          <div class="card-small podcast-card">
+            <a href="#"><img src="assets/img/articles/Square/1.jpg" alt="cover" class="img-fluid"></a>
+            <div class="card-body">
+              <div class="row-meta justify-content-between">
+                <span class="category"><i class="fa-solid fa-chart-pie"></i> تقديرات</span>
+                <div class="d-flex gap-3">
+                  <div class="date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <time datetime="2025-04-15">١٥ · إبريل · ٢٠٢٥</time>
+                  </div>
+                  <div class="author">
+                    <i class="fa-solid fa-feather"></i> محمد أحمد
+                  </div>
+                </div>
+              </div>
+              <h6 class="mt-2 mb-3">
+                <a href="#" class="card-link">طهران: رفع العقوبات مطلبنا في أي مفاوضات</a>
+              </h6>
+
+              <!-- Podcast player -->
+              <div class="podcast-player" data-src="assets/audio/001.mp3">
+                <button class="pp-btn pp-back" title="Back 10s"><i class="fa-solid fa-rotate-left"></i></button>
+                <button class="pp-btn pp-play" title="Play/Pause"><i class="fa-solid fa-play"></i></button>
+                <button class="pp-btn pp-forward" title="Forward 10s"><i class="fa-solid fa-rotate-right"></i></button>
+                <button class="pp-btn pp-mute" title="Mute"><i class="fa-solid fa-volume-high"></i></button>
+                <div class="pp-wave"></div>
+                <div class="pp-time"><span class="pp-current">0:00</span> / <span class="pp-duration">0:00</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ===== Podcast Card 02 ===== -->
+        <div class="col-lg-4">
+          <div class="card-small podcast-card">
+            <a href="#"><img src="assets/img/articles/Square/2.jpg" alt="cover" class="img-fluid"></a>
+            <div class="card-body">
+              <div class="row-meta justify-content-between">
+                <span class="category"><i class="fa-solid fa-chart-pie"></i> تقديرات</span>
+                <div class="d-flex gap-3">
+                  <div class="date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <time datetime="2025-04-15">١٥ · إبريل · ٢٠٢٥</time>
+                  </div>
+                  <div class="author">
+                    <i class="fa-solid fa-feather"></i> محمد أحمد
+                  </div>
+                </div>
+              </div>
+              <h6 class="mt-2 mb-3">
+                <a href="#" class="card-link">طهران: رفع العقوبات مطلبنا في أي مفاوضات</a>
+              </h6>
+
+              <!-- Podcast player -->
+              <div class="podcast-player" data-src="assets/audio/001.mp3">
+                <button class="pp-btn pp-back" title="Back 10s"><i class="fa-solid fa-rotate-left"></i></button>
+                <button class="pp-btn pp-play" title="Play/Pause"><i class="fa-solid fa-play"></i></button>
+                <button class="pp-btn pp-forward" title="Forward 10s"><i class="fa-solid fa-rotate-right"></i></button>
+                <button class="pp-btn pp-mute" title="Mute"><i class="fa-solid fa-volume-high"></i></button>
+                <div class="pp-wave"></div>
+                <div class="pp-time"><span class="pp-current">0:00</span> / <span class="pp-duration">0:00</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ===== Podcast Card 03 ===== -->
+        <div class="col-lg-4">
+          <div class="card-small podcast-card">
+            <a href="#"><img src="assets/img/articles/Square/3.jpg" alt="cover" class="img-fluid"></a>
+            <div class="card-body">
+              <div class="row-meta justify-content-between">
+                <span class="category"><i class="fa-solid fa-chart-pie"></i> تقديرات</span>
+                <div class="d-flex gap-3">
+                  <div class="date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <time datetime="2025-04-15">١٥ · إبريل · ٢٠٢٥</time>
+                  </div>
+                  <div class="author">
+                    <i class="fa-solid fa-feather"></i> محمد أحمد
+                  </div>
+                </div>
+              </div>
+              <h6 class="mt-2 mb-3">
+                <a href="#" class="card-link">طهران: رفع العقوبات مطلبنا في أي مفاوضات</a>
+              </h6>
+
+              <!-- Podcast player -->
+              <div class="podcast-player" data-src="assets/audio/001.mp3">
+                <button class="pp-btn pp-back" title="Back 10s"><i class="fa-solid fa-rotate-left"></i></button>
+                <button class="pp-btn pp-play" title="Play/Pause"><i class="fa-solid fa-play"></i></button>
+                <button class="pp-btn pp-forward" title="Forward 10s"><i class="fa-solid fa-rotate-right"></i></button>
+                <button class="pp-btn pp-mute" title="Mute"><i class="fa-solid fa-volume-high"></i></button>
+                <div class="pp-wave"></div>
+                <div class="pp-time"><span class="pp-current">0:00</span> / <span class="pp-duration">0:00</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /row -->
+    </div><!-- /container -->
+  </section>
+
+
+
   <!-- JS files -->
   <script src="assets/js/jquery-3.7.1.min.js"></script>
   <script src="assets/js/owl.carousel.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/animation.js"></script>
   <script src="assets/js/script.js" defer></script>

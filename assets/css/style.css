@@ -711,3 +711,197 @@ nav.box-navbar {
     margin-bottom: var(--space-md);
   }
 }
+
+.articles-section,
+.podcast-section,
+.studies-section {
+  padding-block: var(--container-padding-horizontal);
+
+}
+
+/* spacing between mini items */
+.mini-news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: var(--space-sm);
+}
+
+.mini-news-list li+li {
+  margin-top: var(--space-sm);
+}
+
+/* mini article link */
+.mini-link {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: none;
+  display: block;
+}
+
+.mini-link:hover {
+  color: var(--color-primary);
+}
+
+/* mini meta row */
+.mini-meta {
+  font-size: var(--font-xs);
+  color: var(--text-secondary);
+  margin-top: var(--space-xxs);
+}
+
+/* large card tweaks */
+.card-large img {
+  border-radius: var(--radius-md);
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-large .card-body {
+  padding-top: var(--space-sm);
+}
+
+.card-large h4 {
+  font-size: var(--font-lg);
+}
+
+
+/* ========================================================= */
+/*                PODCAST CARD & PLAYER STYLES               */
+/* ========================================================= */
+
+/* Ensure spacing matches news cards */
+.podcast-card {
+  margin-bottom: var(--space-lg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+/* Thumbnail corner rounding */
+.podcast-card .img-fluid {
+  border-radius: var(--radius-md);
+}
+
+/* Card body padding */
+.podcast-card .card-body {
+  padding: var(--space-sm) 0;
+}
+
+
+
+/* Title and meta */
+.podcast-card .card-title a {
+  font-size: var(--font-md);
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.podcast-card .card-title a:hover {
+  color: var(--color-primary-hover);
+}
+
+.podcast-card .row-meta {
+  font-size: var(--font-xs);
+  color: var(--text-secondary);
+  display: flex;
+  gap: var(--space-md);
+}
+
+/* ========================================================= */
+/*           PODCAST PLAYER INLINE (ONE ROW) STYLES          */
+/* ========================================================= */
+/* =========================================== */
+/*         REFINED PODCAST PLAYER CSS          */
+/* =========================================== */
+
+/* Player container: light, airy, minimal */
+.podcast-player {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* tighter gap */
+  padding: 6px 12px;
+  /* slimmer padding */
+  background: #FFFFFF;
+  /* pure white for clarity */
+  border: 1px solid #E0E0E0;
+  /* very light border */
+  border-radius: 20px;
+  /* pill shape */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  font-size: 0.875rem;
+  /* base font size */
+}
+
+/* Control buttons: uniform, understated */
+.podcast-player .pp-btn {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  color: #888888;
+  /* medium gray icons */
+  font-size: 1rem;
+  display: grid;
+  place-items: center;
+  transition: color 0.2s;
+}
+
+/* Icon hover: highlight with primary */
+.podcast-player .pp-btn:hover {
+  color: var(--color-primary-hover);
+}
+
+/* Play/Pause button: slightly larger and filled */
+.podcast-player .pp-play {
+  width: 28px;
+  height: 28px;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s;
+}
+
+/* Play hover: deeper primary shade */
+.podcast-player .pp-play:hover {
+  background: var(--color-primary-hover);
+  color: #fff;
+}
+
+/* Waveform container: reduced height */
+.podcast-player .pp-wave {
+  flex: 1;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  /* subtle track background */
+}
+
+/* Time display: quieter text */
+.podcast-player .pp-time {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  color: #AAAAAA;
+  white-space: nowrap;
+  min-width: 50px;
+  /* ensure it doesn’t collapse */
+  text-align: right;
+}
+
+/* Responsive wrap for very narrow screens */
+@media (max-width: 767.98px) {
+  .podcast-player {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .podcast-player .pp-wave {
+    order: 5;
+    width: 100%;
+    margin: 6px 0;
+  }
+}

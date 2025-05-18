@@ -136,4 +136,67 @@ $(document).ready(function () {
     $('.news-thumb').removeClass('active');
     $('.news-thumb[data-slide="' + index + '"]').addClass('active');
   });
+
+  // =========================================================
+  //      Enhanced WaveSurfer.js Podcast Player Logic
+  // =========================================================
+  document.querySelectorAll('.podcast-player').forEach(container => {
+    const ws = WaveSurfer.create({
+      container: container.querySelector('.pp-wave'),
+      waveColor: '#DCDCDC',
+      progressColor: '#3AB4FF',
+      barWidth: 2,
+      height: 38,
+      cursorWidth: 1,
+      cursorColor: '#999'
+    });
+    ws.load(container.dataset.src);
+
+    const play = container.querySelector('.pp-play');
+    const back = container.querySelector('.pp-back');
+    const forward = container.querySelector('.pp-forward');
+    const mute = container.querySelector('.pp-mute');
+    const curr = container.querySelector('.pp-current');
+    const dur = container.querySelector('.pp-duration');
+
+    const formatTime = s => new Date(s * 1000).toISOString().substr(14, 5);
+
+    ws.on('ready', () => {
+      dur.textContent = formatTime(ws.getDuration());
+      ws.setVolume(1);
+    });
+
+    play.addEventListener('click', () => ws.playPause());
+    ws.on('play', () => play.innerHTML = '<i class="fa-solid fa-pause"></i>');
+    ws.on('pause', () => play.innerHTML = '<i class="fa-solid fa-play"></i>');
+    ws.on('finish', () => play.innerHTML = '<i class="fa-solid fa-play"></i>');
+
+    back.addEventListener('click', () => {
+      const t = Math.max(ws.getCurrentTime() - 10, 0);
+      ws.seekTo(t / ws.getDuration());
+    });
+
+    forward.addEventListener('click', () => {
+      const t = Math.min(ws.getCurrentTime() + 10, ws.getDuration());
+      ws.seekTo(t / ws.getDuration());
+    });
+
+    let lastVol = 1;
+    let isMuted = false;
+    mute.addEventListener('click', () => {
+      isMuted = !isMuted;
+      if (isMuted) {
+        lastVol = ws.getVolume();
+        ws.setVolume(0);
+        mute.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+      } else {
+        ws.setVolume(lastVol);
+        mute.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+      }
+    });
+
+    ws.on('audioprocess', () => {
+      curr.textContent = formatTime(ws.getCurrentTime());
+    });
+  });
 });
