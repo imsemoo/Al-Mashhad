@@ -1220,6 +1220,150 @@
   </section>
 
 
+  <!-- ========================================================= -->
+  <!--                        VIDEOS SECTION                     -->
+  <!--  • Mix of local & YouTube videos                          -->
+  <!--  • Featured horizontal + three small cards                -->
+  <!--  • Click “play” swaps poster for HTML5 <video> or YouTube -->
+  <!-- ========================================================= -->
+  <section class="videos-section my-5">
+    <div class="container">
+
+      <!-- Section header -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="section-title">فيديوهات</h2>
+        <a href="#" class="more-link">عرض المزيد <i class="fa-solid fa-angles-left"></i></a>
+      </div>
+
+      <!-- Featured horizontal video -->
+      <div class="row gx-4 gy-4 mb-5">
+        <div class="col-lg-7">
+          <div class="video-featured position-relative" data-src="assets/video/dummy.mp4">
+            <!-- Poster image -->
+            <img src="assets/img/articles/Horizontal/1.jpg" alt="Featured video" class="img-fluid rounded">
+
+            <!-- Hidden HTML5 video for local file -->
+            <video class="video-element rounded" controls style="display:none; width:100%; height:auto;">
+              <source src="assets/video/dummy.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+
+            <!-- Play button overlay -->
+            <button class="video-play" aria-label="Play video">
+              <i class="fa-solid fa-play"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-5 d-flex flex-column justify-content-center">
+          <div class="row-meta justify-content-between mb-3">
+            <span class="category"><i class="fa-solid fa-video"></i> فيديو</span>
+            <div class="d-flex gap-3">
+              <div class="date">
+                <i class="fa-solid fa-calendar-days"></i>
+                <time datetime="2025-04-15">١٥ · إبريل · ٢٠٢٥</time>
+              </div>
+              <div class="author">
+                <i class="fa-solid fa-user"></i> محمد أحمد
+              </div>
+            </div>
+          </div>
+          <h3 class="mb-3">
+            السعودية تعرض منتجاتها السيبرانية للعالم في مؤتمر “RSA الدولي”
+          </h3>
+          <p class="text-muted">
+            تشارك السعودية ممثلة في الهيئة الوطنية للأمن السيبراني في جناحٍ سعودي في مؤتمر “RSA الدولي” الذي يُعقد
+            من 28 أبريل إلى 1 مايو 2025 في سان فرانسيسكو.
+          </p>
+        </div>
+      </div>
+
+      <!-- Three standard video cards -->
+      <div class="row gx-4 gy-4">
+        <!-- Card 1: local video -->
+        <div class="col-lg-4">
+          <div class="card-small position-relative">
+            <div class="container-video position-relative" data-src="assets/video/dummy.mp4">
+              <img src="assets/img/articles/Horizontal/2.jpg" alt="Video thumbnail" class="img-fluid rounded">
+              <button class="video-play-sm" aria-label="Play video">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <video class="video-element-sm rounded" controls
+                style="display:none; width:100%; height:100%; position:absolute; top:0; left:0; object-fit:cover;">
+                <source src="assets/video/dummy.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+            </div>
+            <div class="card-body">
+              <div class="row-meta justify-content-between mb-2">
+                <span class="category"><i class="fa-solid fa-video"></i> فيديو</span>
+                <div class="d-flex gap-3">
+                  <div class="date"><i class="fa-solid fa-calendar-days"></i> 15 إبريل 2025</div>
+                  <div class="author"><i class="fa-solid fa-user"></i> محمد أحمد</div>
+                </div>
+              </div>
+              <h6 class="card-title">
+                <a href="#" class="card-link">الصين تعارض عقد أي صفقات بين أمريكا ودول أخرى</a>
+              </h6>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: YouTube embed -->
+        <div class="col-lg-4">
+          <div class="card-small position-relative">
+            <div class="container-video position-relative" data-youtube-id="dQw4w9WgXcQ">
+              <img src="assets/img/articles/Horizontal/3.jpg" alt="Video thumbnail" class="img-fluid rounded">
+              <button class="video-play-sm" aria-label="Play video">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <!-- no <video> tag here -->
+            </div>
+            <div class="card-body">
+              <div class="row-meta justify-content-between mb-2">
+                <span class="category"><i class="fa-solid fa-video"></i> فيديو</span>
+                <div class="d-flex gap-3">
+                  <div class="date"><i class="fa-solid fa-calendar-days"></i> 15 إبريل 2025</div>
+                  <div class="author"><i class="fa-solid fa-user"></i> محمد أحمد</div>
+                </div>
+              </div>
+              <h6 class="card-title">
+                <a href="#" class="card-link">الصين تعارض عقد أي صفقات بين أمريكا ودول أخرى</a>
+              </h6>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: local video -->
+        <div class="col-lg-4">
+          <div class="card-small position-relative">
+            <div class="container-video position-relative" data-src="assets/video/dummy.mp4">
+              <img src="assets/img/articles/Square/5.jpg" alt="Video thumbnail" class="img-fluid rounded">
+              <button class="video-play-sm" aria-label="Play video">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <video class="video-element-sm rounded" controls
+                style="display:none; width:100%; height:100%; position:absolute; top:0; left:0; object-fit:cover;">
+                <source src="assets/video/dummy.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="card-body">
+              <div class="row-meta justify-content-between mb-2">
+                <span class="category"><i class="fa-solid fa-video"></i> فيديو</span>
+                <div class="d-flex gap-3">
+                  <div class="date"><i class="fa-solid fa-calendar-days"></i> 15 إبريل 2025</div>
+                  <div class="author"><i class="fa-solid fa-user"></i> محمد أحمد</div>
+                </div>
+              </div>
+              <h6 class="card-title">
+                <a href="#" class="card-link">الصين تعارض عقد أي صفقات بين أمريكا ودول أخرى</a>
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- JS files -->
   <script src="assets/js/jquery-3.7.1.min.js"></script>

@@ -905,3 +905,80 @@ nav.box-navbar {
     margin: 6px 0;
   }
 }
+
+.video-featured,
+.container-video {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Featured play button */
+.video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 1.5rem;
+  transition: background .3s;
+}
+
+.video-play:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Small play button */
+.video-play-sm {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  background: var(--color-primary);
+  border: none;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background .2s;
+}
+
+.video-play-sm:hover {
+  background: var(--color-primary-hover);
+}
+
+/* Hide poster & button when playing */
+.playing>img,
+.playing>.video-play,
+.playing>.video-play-sm {
+  display: none !important;
+}
+
+/* Show video element when playing */
+.playing>video {
+  display: block !important;
+}
+
+/* YouTube iframe */
+.youtube-embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Card-body spacing so button doesn't overlap text */
+.card-small .card-body {
+  margin-top: var(--space-lg);
+}

@@ -199,4 +199,34 @@ $(document).ready(function () {
       curr.textContent = formatTime(ws.getCurrentTime());
     });
   });
+
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.video-featured, .container-video').forEach(container => {
+    const playBtn = container.querySelector('.video-play, .video-play-sm');
+    const posterImg = container.querySelector('img');
+    const localVideo = container.querySelector('video');
+    const ytId = container.dataset.youtubeId;
+    const localSrc = container.dataset.src;
+
+    playBtn.addEventListener('click', () => {
+      // LOCAL VIDEO
+      if (localVideo && localSrc) {
+        container.classList.add('playing');
+        localVideo.currentTime = 0;
+        localVideo.play();
+      }
+      // YOUTUBE EMBED
+      else if (ytId) {
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0`;
+        iframe.allow = 'autoplay; encrypted-media';
+        iframe.className = 'youtube-embed rounded';
+        container.appendChild(iframe);
+        container.classList.add('playing');
+      }
+    });
+  });
 });
