@@ -599,13 +599,7 @@ nav.box-navbar {
   opacity: 0.85;
 }
 
-.badge {
-  background: var(--color-accent);
-  color: var(--color-primary-hover);
-  padding: 2px 10px;
-  border-radius: var(--radius-sm);
-  font-size: var(--font-xs);
-}
+
 
 /* ---------- Medium Card ---------- */
 .medium-card {
@@ -1064,11 +1058,7 @@ nav.box-navbar {
   font-size: var(--font-xs);
 }
 
-/* Small badge override */
-.featured-card .badge {
-  font-size: var(--font-xs);
-  padding: 2px 6px;
-}
+
 
 /* Standard small card base */
 .card-small {
@@ -1102,7 +1092,9 @@ nav.box-navbar {
 
 /* ================= Subscribe Section ================= */
 .subscribe-section {
-  background: linear-gradient(135deg, #E6F7FF 0%, #FFFFFF 100%);
+  background: linear-gradient(240deg, #FFF 31.87%, #C7EEFF 88.56%);
+  padding-block: var(--container-padding-horizontal);
+
 }
 
 /* Icon */
@@ -1202,12 +1194,14 @@ nav.box-navbar {
 .footer-contact li {
   color: #BBBBBB;
   text-decoration: none;
-  margin-bottom: var(--space-xxs);
+  margin-bottom: var(--space-xs);
   display: block;
   transition: color .2s;
   font-size: var(--font-sm);
 
 }
+
+
 
 .footer-links a:hover {
   color: #FFFFFF;
@@ -1271,4 +1265,131 @@ nav.box-navbar {
   .footer-tags {
     justify-content: flex-start;
   }
+}
+
+/* ========================= */
+/*     ARTICLES PAGE CSS     */
+/* ========================= */
+
+/* Sidebar container */
+.sidebar {
+  background: #E6F7FF;
+}
+
+/* Follow Us box */
+.follow-us {}
+
+/* Podcast mini card adjustments */
+.podcast-player-mini {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-sm);
+}
+
+.podcast-slider .podcast-card {
+  background: transparent;
+  box-shadow: none;
+  margin: 0;
+}
+
+.podcast-slider .podcast-card .card-body {
+  background: transparent;
+  padding: 0;
+  padding-top: 16px;
+}
+
+.podcast-slider .podcast-card .card-body .category {
+  background: #fff;
+
+}
+
+.pp-wave-mini {
+  flex: 1;
+  height: 24px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-sm);
+}
+
+/* Trend numbers */
+.trend-num {
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-right: var(--space-sm);
+  flex-shrink: 0;
+  width: 2rem;
+  text-align: right;
+}
+
+/* Mini subscribe styling uses existing variables */
+
+
+
+
+/* Pagination */
+.pagination .page-link {
+  color: var(--color-dark);
+}
+
+.pagination .page-item.active .page-link {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+/* ============================== */
+/*  Creative Sidebar Section Titles */
+/* ============================== */
+
+.sidebar-section .sidebar-title {
+  display: inline-block;
+  position: relative;
+  font-size: var(--font-lg);
+  font-weight: 700;
+  color: var(--color-dark);
+
+  margin-bottom: var(--space-md);
+}
+
+/* Decorative underline */
+.sidebar-section .sidebar-title::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  right: 0;
+  width: 40%;
+  height: 4px;
+  background: var(--color-primary);
+  border-radius: var(--radius-sm);
+}
+
+/* Professional comment: Hide default dots */
+.podcast-slider .owl-dots {
+  text-align: center;
+  margin-top: var(--space-md);
+  display: flex;
+  justify-content: center;
+}
+
+/* Professional comment: Style each dot container */
+.podcast-slider .owl-dots .owl-dot {
+  display: inline-block;
+  margin: 0 var(--space-xs);
+}
+
+/* Professional comment: Unselected dot */
+.podcast-slider .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  display: block;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+/* Professional comment: Active dot */
+.podcast-slider .owl-dots .owl-dot.active span {
+  width: 14px;
+  height: 14px;
+  background: var(--color-primary);
 }

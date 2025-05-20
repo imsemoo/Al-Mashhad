@@ -10,7 +10,19 @@ $(document).ready(function () {
       searchInputContainer.classList.toggle('active');
     });
   });
-
+  $('.podcast-slider').owlCarousel({
+    items: 1,
+    rtl: true,
+    loop: true,
+    nav: false,
+    dots: true,
+    autoplay: false,
+    margin: 20,
+    responsive: {
+      576: { items: 1 },
+      768: { items: 1 }
+    }
+  });
   $(".articlesSlider").owlCarousel({
     loop: true,
     rtl: true,
@@ -54,6 +66,7 @@ $(document).ready(function () {
       }
     }
   });
+
   // عند تحميل الصفحة بالكامل
   $(window).on('load', function () {
     $('#preloadr').fadeOut(500); // بيخفي اللودر بعد التحميل بـ 0.5 ثانية
